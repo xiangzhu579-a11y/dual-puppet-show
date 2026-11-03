@@ -60,7 +60,7 @@
 | 端 | 代码入口 | 关键行为 |
 |---|---|---|
 | K230 | `k230/deploy_cls.py` + `k230/gesture_logic.py` | 224×224 分类、阈值 0.80、3/5 帧防抖、状态变化即发、稳定后 500 ms 重发 |
-| PYNQ | `pynq/runtime/main.py` | 加载 Overlay、解析行协议、`START`/`STOP` 同时写入两路 FIFO 后等待发送、LED0~3 指示 |
+| PYNQ | `pynq/main.py` | 加载 Overlay、解析行协议、`START`/`STOP` 同时写入两路 FIFO 后等待发送、LED0~3 指示 |
 | RA6M5 | `mcu/RA6M5_Robot1/src/hal_entry.c` | 命令解析、动作组循环、逐路限幅、20 ms 插值、STOP 先停底盘再归位 |
 
 PYNQ 的 PL 结构（三路 UART 与 LED 的地址分配）：
@@ -147,7 +147,7 @@ PYNQ 的 PL 结构（三路 UART 与 LED 的地址分配）：
 
 ```bash
 # 拷贝运行文件到板上
-scp -r pynq/runtime/* xilinx@<board-ip>:/home/xilinx/jupyter_notebooks/puppet_show/main_project/
+scp -r pynq/* xilinx@<board-ip>:/home/xilinx/jupyter_notebooks/puppet_show/main_project/
 
 # 运行（与 Notebook 入口二选一）
 ssh xilinx@<board-ip>
@@ -155,12 +155,12 @@ cd /home/xilinx/jupyter_notebooks/puppet_show/main_project
 python3 main.py
 ```
 
-自启动：`sudo cp pynq/runtime/puppet-show.service /etc/systemd/system/ && sudo systemctl enable --now puppet-show`（路径与 Python 环境需按板上镜像调整）。
+自启动：`sudo cp pynq/puppet-show.service /etc/systemd/system/ && sudo systemctl enable --now puppet-show`（路径与 Python 环境需按板上镜像调整）。
 
 单测（PC 上即可运行，不需要板子）：
 
 ```bash
-cd pynq/runtime && python3 -m unittest discover -v
+cd pynq && python3 -m unittest discover -v
 ```
 
 ### 3. RA6M5 执行端
