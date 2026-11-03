@@ -1,0 +1,2 @@
+﻿BUILD PASS: 02_RA6M5\RA6M5_Robot2\Build_Check\RA6M5_Robot2.elf
+

@@ -1,0 +1,41 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.734387",
+   "Default View_TopLeft":"-690,-667",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:24.0
+#  -string -flagsOSRD
+preplace port ra_uart -pg 1 -lvl 3 -x 720 -y -310 -defaultsOSRD
+preplace port DDR -pg 1 -lvl 3 -x 720 -y 40 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 3 -x 720 -y 70 -defaultsOSRD
+preplace port uart_k230 -pg 1 -lvl 3 -x 720 -y -420 -defaultsOSRD
+preplace port rb_uart -pg 1 -lvl 3 -x 720 -y -460 -defaultsOSRD
+preplace portBus led -pg 1 -lvl 3 -x 720 -y -580 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 2 -x 410 -y 210 -defaultsOSRD
+preplace inst axi_uartlite_0 -pg 1 -lvl 2 -x 410 -y -300 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -x 410 -y -60 -defaultsOSRD
+preplace inst rst_ps7_0_50M -pg 1 -lvl 2 -x 410 -y 500 -defaultsOSRD
+preplace inst util_vector_logic_0 -pg 1 -lvl 2 -x 410 -y 360 -defaultsOSRD
+preplace inst axi_uartlite_1 -pg 1 -lvl 1 -x 40 -y -220 -defaultsOSRD
+preplace inst axi_uartlite_2 -pg 1 -lvl 1 -x 40 -y -10 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 2 -x 410 -y -590 -defaultsOSRD
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 -80 -310 170 -470 640
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 2 190 -410 630
+preplace netloc rst_ps7_0_50M_peripheral_aresetn 1 0 3 -70 -300 160 -430 680
+preplace netloc util_vector_logic_0_Res 1 1 2 200 -400 670
+preplace netloc axi_gpio_0_gpio_io_o 1 2 1 N -580
+preplace netloc axi_uartlite_0_UART 1 2 1 N -310
+preplace netloc axi_uartlite_1_UART 1 1 2 180J -420 NJ
+preplace netloc axi_uartlite_2_UART 1 1 2 150J -450 660J
+preplace netloc processing_system7_0_DDR 1 2 1 690J 40n
+preplace netloc processing_system7_0_FIXED_IO 1 2 1 700J 70n
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 2 210 -390 660
+preplace netloc ps7_0_axi_periph_M00_AXI 1 1 2 220 -380 600
+preplace netloc ps7_0_axi_periph_M01_AXI 1 0 3 -100 -460 NJ -460 620
+preplace netloc ps7_0_axi_periph_M02_AXI 1 0 3 -90 -440 NJ -440 610
+preplace netloc ps7_0_axi_periph_M03_AXI 1 1 2 220 -480 650
+levelinfo -pg 1 -310 40 410 720
+pagesize -pg 1 -db -bbox -sgen -310 -670 880 600
+"
+}
+0

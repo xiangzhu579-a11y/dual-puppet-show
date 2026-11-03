@@ -1,0 +1,24 @@
+[Unit]
+Description=Puppet show K230 to two RA6M5 UART bridge with LED status
+After=local-fs.target bootpy.service
+RequiresMountsFor=/home/xilinx/jupyter_notebooks/puppet_show/main_project
+StartLimitIntervalSec=120
+StartLimitBurst=5
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/home/xilinx/jupyter_notebooks/puppet_show/main_project
+EnvironmentFile=-/etc/environment
+Environment="XILINX_XRT=/usr"
+Environment="VIRTUAL_ENV=/usr/local/share/pynq-venv"
+Environment="PATH=/usr/local/share/pynq-venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+ExecStart=/usr/local/share/pynq-venv/bin/python3 -u /home/xilinx/jupyter_notebooks/puppet_show/main_project/main.py
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

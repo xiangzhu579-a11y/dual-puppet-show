@@ -1,0 +1,12 @@
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.pdf binary
+*.kmodel binary
+*.onnx binary
+*.pt binary
+*.bit binary
+*.hwh binary
+*.elf binary
